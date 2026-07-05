@@ -2,9 +2,7 @@ from file_helpers import read_file, programming_language_name
 
 
 def system_prompt():
-    """
-    Gets the Pseudocode from it's function, Gets the Programming language from it's function, and Returns System Prompt
-    """
+    """Gets the Pseudocode from it's function, Gets the Programming language from it's function, and Returns System Prompt"""
 
     pseudocode = read_file()  # The pseudocode in the file
 

@@ -32,7 +32,7 @@ If you have Git installed, clone the repository:
 
 ```bash
 git clone https://github.com/Anas-AbdelRaoof/Pseutocode.git
-cd Pseutocode/src
+cd Pseutocode
 ```
 
 ### Option 2: Download as ZIP

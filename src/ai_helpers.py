@@ -29,24 +29,11 @@ def convert_pseudocode_to_code_with_ai():
         client = Groq(
             api_key=os.environ.get("GROQ_API_KEY")
         )
-    except APIConnectionError as e:
-        print(f"[red]Failed to connect to Groq API:[/red] [italic blue]{e}[/italic blue]")
-        exit()
-    except APIStatusError as e:
-        print(f"[red]Groq API returned an error status:[/red] [italic blue]{e}[/italic blue]")
-        exit()
-    except APITimeoutError as e:
-        print(f"[red]Groq API request timed out:[/red] [italic blue]{e}[/italic blue]")
-        exit()
-    except RateLimitError as e:
-        print(f"[red]Groq API rate limit exceeded:[/red] [italic blue]{e}[/italic blue]")
-        exit()
 
     # Send a chat completion request to the Groq API with the system prompt
     # The model will process the pseudocode and generate corresponding code
     current_system_prompt = system_prompt()
 
-    try:
         chat_completion = client.chat.completions.create(
             messages=[
                 {

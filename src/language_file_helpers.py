@@ -1,6 +1,7 @@
 import sys
 from rich import print
 import os
+import json
 
 
 def check_lang(language_name, language_file):
@@ -34,9 +35,12 @@ def check_lang(language_name, language_file):
     """
 
     try:
-        file_and_extension = language_file.split(".")
+        with open("languages.json", "r") as file:
+            languages = json.load(file)
 
-        extension = languages_extensions[language_name]  # Language name's extension
+        lang = languages[language_name]
+        
+        extension = lang["extension"]  # Language name's extension
 
         if not language_file.endswith(extension):  # Ex: name: Rust file: .lua
             print(

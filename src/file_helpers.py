@@ -40,7 +40,7 @@ def check_file_txt(file):
 
 
 def is_empty_file(file):
-    """is_empty_file checks for if the file with no content, if there is no content it output error message"""
+    """is_empty_file checks if the file has no content; if there is no content, it outputs an error message"""
 
     if os.path.getsize(file) == 0:
         print(f"[red]File [italic blue]<{file}>[/italic blue] is empty[/red]")
@@ -48,14 +48,14 @@ def is_empty_file(file):
 
 
 def programming_language_name():
-    """Returns the name of Programming language by lower()ing it"""
+    """Returns the name of the programming language by lower()ing it"""
 
     return argv[2].lower()
 
 
 def programming_language_file():
     """
-    Returns Programming language file
+    Returns the programming language file
     Notice: the file will be lower()
     """
 
